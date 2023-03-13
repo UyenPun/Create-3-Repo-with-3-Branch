@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* Reset lại một vài thuộc tính */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+#layout {
+  border: 1px solid #a3a2a3;
+  margin: 20px auto;
+  width: 700px;
+}
+
+header,
+footer,
+#content,
+aside,
+.box-list li {
+  font-size: 30px;
+  text-align: center;
+}
+
+header {
+  background-color: #92dfc8;
+  height: 80px;
+  line-height: 80px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#content {
+  background-color: #caeff2;
+  height: 400px;
+  line-height: 400px;
+  width: 500px;
+}
+
+aside {
+  background-color: #f2d8ca;
+  height: 400px;
+  line-height: 400px;
+  width: 200px;
+}
+
+.box-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.box-list li {
+  background-color: #f2f1ca;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 167.49px;
+}
+
+.box-list li:last-child {
+  margin-right: 0;
+}
+
+footer {
+  background-color: #eecbf3;
+  height: 80px;
+  line-height: 80px;
+}
+
+@media only screen and (max-width: 700px) {
+  #layout,
+  #content,
+  aside {
+    width: 100%;
+  }
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .box-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .box-list li {
+    margin-right: 0;
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 468px) {
+  .box-list li {
+    width: 100%;
+  }
+}
